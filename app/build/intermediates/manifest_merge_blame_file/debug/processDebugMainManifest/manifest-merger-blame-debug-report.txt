@@ -1,0 +1,213 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.runtracker"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="26"
+9        android:targetSdkVersion="35" />
+10
+11    <!-- Интернет нужен для загрузки тайлов OpenStreetMap -->
+12    <uses-permission android:name="android.permission.INTERNET" />
+12-->C:\Users\artur\AndroidStudioProjects\RunTrackerOSM\app\src\main\AndroidManifest.xml:4:5-67
+12-->C:\Users\artur\AndroidStudioProjects\RunTrackerOSM\app\src\main\AndroidManifest.xml:4:22-64
+13    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+13-->C:\Users\artur\AndroidStudioProjects\RunTrackerOSM\app\src\main\AndroidManifest.xml:5:5-79
+13-->C:\Users\artur\AndroidStudioProjects\RunTrackerOSM\app\src\main\AndroidManifest.xml:5:22-76
+14
+15    <!-- Геолокация -->
+16    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+16-->C:\Users\artur\AndroidStudioProjects\RunTrackerOSM\app\src\main\AndroidManifest.xml:8:5-79
+16-->C:\Users\artur\AndroidStudioProjects\RunTrackerOSM\app\src\main\AndroidManifest.xml:8:22-76
+17    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+17-->C:\Users\artur\AndroidStudioProjects\RunTrackerOSM\app\src\main\AndroidManifest.xml:9:5-81
+17-->C:\Users\artur\AndroidStudioProjects\RunTrackerOSM\app\src\main\AndroidManifest.xml:9:22-78
+18
+19    <!-- Foreground Service для стабильной записи трека -->
+20    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+20-->C:\Users\artur\AndroidStudioProjects\RunTrackerOSM\app\src\main\AndroidManifest.xml:12:5-77
+20-->C:\Users\artur\AndroidStudioProjects\RunTrackerOSM\app\src\main\AndroidManifest.xml:12:22-74
+21    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_LOCATION" />
+21-->C:\Users\artur\AndroidStudioProjects\RunTrackerOSM\app\src\main\AndroidManifest.xml:13:5-86
+21-->C:\Users\artur\AndroidStudioProjects\RunTrackerOSM\app\src\main\AndroidManifest.xml:13:22-83
+22
+23    <!-- Уведомления на Android 13+ -->
+24    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+24-->C:\Users\artur\AndroidStudioProjects\RunTrackerOSM\app\src\main\AndroidManifest.xml:16:5-77
+24-->C:\Users\artur\AndroidStudioProjects\RunTrackerOSM\app\src\main\AndroidManifest.xml:16:22-74
+25
+26    <uses-feature
+26-->C:\Users\artur\AndroidStudioProjects\RunTrackerOSM\app\src\main\AndroidManifest.xml:18:5-20:36
+27        android:name="android.hardware.location.gps"
+27-->C:\Users\artur\AndroidStudioProjects\RunTrackerOSM\app\src\main\AndroidManifest.xml:19:9-53
+28        android:required="false" />
+28-->C:\Users\artur\AndroidStudioProjects\RunTrackerOSM\app\src\main\AndroidManifest.xml:20:9-33
+29
+30    <permission
+30-->[androidx.core:core:1.15.0] C:\Users\artur\.gradle\caches\9.0.0\transforms\15a2a0518524ee6010326b1af8d8848f\transformed\core-1.15.0\AndroidManifest.xml:22:5-24:47
+31        android:name="com.example.runtracker.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+31-->[androidx.core:core:1.15.0] C:\Users\artur\.gradle\caches\9.0.0\transforms\15a2a0518524ee6010326b1af8d8848f\transformed\core-1.15.0\AndroidManifest.xml:23:9-81
+32        android:protectionLevel="signature" />
+32-->[androidx.core:core:1.15.0] C:\Users\artur\.gradle\caches\9.0.0\transforms\15a2a0518524ee6010326b1af8d8848f\transformed\core-1.15.0\AndroidManifest.xml:24:9-44
+33
+34    <uses-permission android:name="com.example.runtracker.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+34-->[androidx.core:core:1.15.0] C:\Users\artur\.gradle\caches\9.0.0\transforms\15a2a0518524ee6010326b1af8d8848f\transformed\core-1.15.0\AndroidManifest.xml:26:5-97
+34-->[androidx.core:core:1.15.0] C:\Users\artur\.gradle\caches\9.0.0\transforms\15a2a0518524ee6010326b1af8d8848f\transformed\core-1.15.0\AndroidManifest.xml:26:22-94
+35
+36    <supports-screens
+36-->[org.osmdroid:osmdroid-android:6.1.20] C:\Users\artur\.gradle\caches\9.0.0\transforms\2ae6ecb333eeb47e078408779f9476a1\transformed\osmdroid-android-6.1.20\AndroidManifest.xml:9:5-12:40
+37        android:anyDensity="true"
+37-->[org.osmdroid:osmdroid-android:6.1.20] C:\Users\artur\.gradle\caches\9.0.0\transforms\2ae6ecb333eeb47e078408779f9476a1\transformed\osmdroid-android-6.1.20\AndroidManifest.xml:10:9-34
+38        android:largeScreens="true"
+38-->[org.osmdroid:osmdroid-android:6.1.20] C:\Users\artur\.gradle\caches\9.0.0\transforms\2ae6ecb333eeb47e078408779f9476a1\transformed\osmdroid-android-6.1.20\AndroidManifest.xml:11:9-36
+39        android:normalScreens="true" />
+39-->[org.osmdroid:osmdroid-android:6.1.20] C:\Users\artur\.gradle\caches\9.0.0\transforms\2ae6ecb333eeb47e078408779f9476a1\transformed\osmdroid-android-6.1.20\AndroidManifest.xml:12:9-37
+40
+41    <uses-feature
+41-->[org.osmdroid:osmdroid-android:6.1.20] C:\Users\artur\.gradle\caches\9.0.0\transforms\2ae6ecb333eeb47e078408779f9476a1\transformed\osmdroid-android-6.1.20\AndroidManifest.xml:14:5-16:36
+42        android:name="android.hardware.location.network"
+42-->[org.osmdroid:osmdroid-android:6.1.20] C:\Users\artur\.gradle\caches\9.0.0\transforms\2ae6ecb333eeb47e078408779f9476a1\transformed\osmdroid-android-6.1.20\AndroidManifest.xml:15:9-57
+43        android:required="false" />
+43-->[org.osmdroid:osmdroid-android:6.1.20] C:\Users\artur\.gradle\caches\9.0.0\transforms\2ae6ecb333eeb47e078408779f9476a1\transformed\osmdroid-android-6.1.20\AndroidManifest.xml:16:9-33
+44    <uses-feature
+44-->[org.osmdroid:osmdroid-android:6.1.20] C:\Users\artur\.gradle\caches\9.0.0\transforms\2ae6ecb333eeb47e078408779f9476a1\transformed\osmdroid-android-6.1.20\AndroidManifest.xml:20:5-22:36
+45        android:name="android.hardware.telephony"
+45-->[org.osmdroid:osmdroid-android:6.1.20] C:\Users\artur\.gradle\caches\9.0.0\transforms\2ae6ecb333eeb47e078408779f9476a1\transformed\osmdroid-android-6.1.20\AndroidManifest.xml:21:9-50
+46        android:required="false" />
+46-->[org.osmdroid:osmdroid-android:6.1.20] C:\Users\artur\.gradle\caches\9.0.0\transforms\2ae6ecb333eeb47e078408779f9476a1\transformed\osmdroid-android-6.1.20\AndroidManifest.xml:22:9-33
+47    <uses-feature
+47-->[org.osmdroid:osmdroid-android:6.1.20] C:\Users\artur\.gradle\caches\9.0.0\transforms\2ae6ecb333eeb47e078408779f9476a1\transformed\osmdroid-android-6.1.20\AndroidManifest.xml:23:5-25:36
+48        android:name="android.hardware.wifi"
+48-->[org.osmdroid:osmdroid-android:6.1.20] C:\Users\artur\.gradle\caches\9.0.0\transforms\2ae6ecb333eeb47e078408779f9476a1\transformed\osmdroid-android-6.1.20\AndroidManifest.xml:24:9-45
+49        android:required="false" />
+49-->[org.osmdroid:osmdroid-android:6.1.20] C:\Users\artur\.gradle\caches\9.0.0\transforms\2ae6ecb333eeb47e078408779f9476a1\transformed\osmdroid-android-6.1.20\AndroidManifest.xml:25:9-33
+50
+51    <application
+51-->C:\Users\artur\AndroidStudioProjects\RunTrackerOSM\app\src\main\AndroidManifest.xml:22:5-43:19
+52        android:allowBackup="true"
+52-->C:\Users\artur\AndroidStudioProjects\RunTrackerOSM\app\src\main\AndroidManifest.xml:23:9-35
+53        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+53-->[androidx.core:core:1.15.0] C:\Users\artur\.gradle\caches\9.0.0\transforms\15a2a0518524ee6010326b1af8d8848f\transformed\core-1.15.0\AndroidManifest.xml:28:18-86
+54        android:debuggable="true"
+55        android:extractNativeLibs="false"
+56        android:label="Трекер пробежки"
+56-->C:\Users\artur\AndroidStudioProjects\RunTrackerOSM\app\src\main\AndroidManifest.xml:24:9-40
+57        android:supportsRtl="true"
+57-->C:\Users\artur\AndroidStudioProjects\RunTrackerOSM\app\src\main\AndroidManifest.xml:26:9-35
+58        android:testOnly="true"
+59        android:theme="@style/Theme.RunTracker" >
+59-->C:\Users\artur\AndroidStudioProjects\RunTrackerOSM\app\src\main\AndroidManifest.xml:25:9-48
+60        <activity
+60-->C:\Users\artur\AndroidStudioProjects\RunTrackerOSM\app\src\main\AndroidManifest.xml:28:9-35:20
+61            android:name="com.example.runtracker.MainActivity"
+61-->C:\Users\artur\AndroidStudioProjects\RunTrackerOSM\app\src\main\AndroidManifest.xml:29:13-41
+62            android:exported="true" >
+62-->C:\Users\artur\AndroidStudioProjects\RunTrackerOSM\app\src\main\AndroidManifest.xml:30:13-36
+63            <intent-filter>
+63-->C:\Users\artur\AndroidStudioProjects\RunTrackerOSM\app\src\main\AndroidManifest.xml:31:13-34:29
+64                <action android:name="android.intent.action.MAIN" />
+64-->C:\Users\artur\AndroidStudioProjects\RunTrackerOSM\app\src\main\AndroidManifest.xml:32:17-69
+64-->C:\Users\artur\AndroidStudioProjects\RunTrackerOSM\app\src\main\AndroidManifest.xml:32:25-66
+65
+66                <category android:name="android.intent.category.LAUNCHER" />
+66-->C:\Users\artur\AndroidStudioProjects\RunTrackerOSM\app\src\main\AndroidManifest.xml:33:17-77
+66-->C:\Users\artur\AndroidStudioProjects\RunTrackerOSM\app\src\main\AndroidManifest.xml:33:27-74
+67            </intent-filter>
+68        </activity>
+69
+70        <service
+70-->C:\Users\artur\AndroidStudioProjects\RunTrackerOSM\app\src\main\AndroidManifest.xml:37:9-41:56
+71            android:name="com.example.runtracker.TrackingService"
+71-->C:\Users\artur\AndroidStudioProjects\RunTrackerOSM\app\src\main\AndroidManifest.xml:38:13-44
+72            android:enabled="true"
+72-->C:\Users\artur\AndroidStudioProjects\RunTrackerOSM\app\src\main\AndroidManifest.xml:39:13-35
+73            android:exported="false"
+73-->C:\Users\artur\AndroidStudioProjects\RunTrackerOSM\app\src\main\AndroidManifest.xml:40:13-37
+74            android:foregroundServiceType="location" />
+74-->C:\Users\artur\AndroidStudioProjects\RunTrackerOSM\app\src\main\AndroidManifest.xml:41:13-53
+75
+76        <activity
+76-->[com.google.android.gms:play-services-base:18.5.0] C:\Users\artur\.gradle\caches\9.0.0\transforms\a5805a0aa6bfa3ad8698abf266aa2ea9\transformed\play-services-base-18.5.0\AndroidManifest.xml:5:9-173
+77            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+77-->[com.google.android.gms:play-services-base:18.5.0] C:\Users\artur\.gradle\caches\9.0.0\transforms\a5805a0aa6bfa3ad8698abf266aa2ea9\transformed\play-services-base-18.5.0\AndroidManifest.xml:5:19-85
+78            android:exported="false"
+78-->[com.google.android.gms:play-services-base:18.5.0] C:\Users\artur\.gradle\caches\9.0.0\transforms\a5805a0aa6bfa3ad8698abf266aa2ea9\transformed\play-services-base-18.5.0\AndroidManifest.xml:5:146-170
+79            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+79-->[com.google.android.gms:play-services-base:18.5.0] C:\Users\artur\.gradle\caches\9.0.0\transforms\a5805a0aa6bfa3ad8698abf266aa2ea9\transformed\play-services-base-18.5.0\AndroidManifest.xml:5:86-145
+80
+81        <meta-data
+81-->[com.google.android.gms:play-services-basement:18.4.0] C:\Users\artur\.gradle\caches\9.0.0\transforms\c4bbf138ff751076a75f28984f4dab02\transformed\play-services-basement-18.4.0\AndroidManifest.xml:6:9-122
+82            android:name="com.google.android.gms.version"
+82-->[com.google.android.gms:play-services-basement:18.4.0] C:\Users\artur\.gradle\caches\9.0.0\transforms\c4bbf138ff751076a75f28984f4dab02\transformed\play-services-basement-18.4.0\AndroidManifest.xml:6:20-65
+83            android:value="@integer/google_play_services_version" />
+83-->[com.google.android.gms:play-services-basement:18.4.0] C:\Users\artur\.gradle\caches\9.0.0\transforms\c4bbf138ff751076a75f28984f4dab02\transformed\play-services-basement-18.4.0\AndroidManifest.xml:6:66-119
+84
+85        <provider
+85-->[androidx.emoji2:emoji2:1.3.0] C:\Users\artur\.gradle\caches\9.0.0\transforms\e56085d14d2371c8efff742150ea4e9a\transformed\emoji2-1.3.0\AndroidManifest.xml:24:9-32:20
+86            android:name="androidx.startup.InitializationProvider"
+86-->[androidx.emoji2:emoji2:1.3.0] C:\Users\artur\.gradle\caches\9.0.0\transforms\e56085d14d2371c8efff742150ea4e9a\transformed\emoji2-1.3.0\AndroidManifest.xml:25:13-67
+87            android:authorities="com.example.runtracker.androidx-startup"
+87-->[androidx.emoji2:emoji2:1.3.0] C:\Users\artur\.gradle\caches\9.0.0\transforms\e56085d14d2371c8efff742150ea4e9a\transformed\emoji2-1.3.0\AndroidManifest.xml:26:13-68
+88            android:exported="false" >
+88-->[androidx.emoji2:emoji2:1.3.0] C:\Users\artur\.gradle\caches\9.0.0\transforms\e56085d14d2371c8efff742150ea4e9a\transformed\emoji2-1.3.0\AndroidManifest.xml:27:13-37
+89            <meta-data
+89-->[androidx.emoji2:emoji2:1.3.0] C:\Users\artur\.gradle\caches\9.0.0\transforms\e56085d14d2371c8efff742150ea4e9a\transformed\emoji2-1.3.0\AndroidManifest.xml:29:13-31:52
+90                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+90-->[androidx.emoji2:emoji2:1.3.0] C:\Users\artur\.gradle\caches\9.0.0\transforms\e56085d14d2371c8efff742150ea4e9a\transformed\emoji2-1.3.0\AndroidManifest.xml:30:17-75
+91                android:value="androidx.startup" />
+91-->[androidx.emoji2:emoji2:1.3.0] C:\Users\artur\.gradle\caches\9.0.0\transforms\e56085d14d2371c8efff742150ea4e9a\transformed\emoji2-1.3.0\AndroidManifest.xml:31:17-49
+92            <meta-data
+92-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\artur\.gradle\caches\9.0.0\transforms\a3c638bf304d2442651a77cc271f33a1\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:29:13-31:52
+93                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+93-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\artur\.gradle\caches\9.0.0\transforms\a3c638bf304d2442651a77cc271f33a1\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:30:17-78
+94                android:value="androidx.startup" />
+94-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\artur\.gradle\caches\9.0.0\transforms\a3c638bf304d2442651a77cc271f33a1\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:31:17-49
+95            <meta-data
+95-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\artur\.gradle\caches\9.0.0\transforms\91ff27683e3fc66fc6fdc56cfd7ef053\transformed\profileinstaller-1.3.1\AndroidManifest.xml:29:13-31:52
+96                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+96-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\artur\.gradle\caches\9.0.0\transforms\91ff27683e3fc66fc6fdc56cfd7ef053\transformed\profileinstaller-1.3.1\AndroidManifest.xml:30:17-85
+97                android:value="androidx.startup" />
+97-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\artur\.gradle\caches\9.0.0\transforms\91ff27683e3fc66fc6fdc56cfd7ef053\transformed\profileinstaller-1.3.1\AndroidManifest.xml:31:17-49
+98        </provider>
+99
+100        <receiver
+100-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\artur\.gradle\caches\9.0.0\transforms\91ff27683e3fc66fc6fdc56cfd7ef053\transformed\profileinstaller-1.3.1\AndroidManifest.xml:34:9-52:20
+101            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+101-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\artur\.gradle\caches\9.0.0\transforms\91ff27683e3fc66fc6fdc56cfd7ef053\transformed\profileinstaller-1.3.1\AndroidManifest.xml:35:13-76
+102            android:directBootAware="false"
+102-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\artur\.gradle\caches\9.0.0\transforms\91ff27683e3fc66fc6fdc56cfd7ef053\transformed\profileinstaller-1.3.1\AndroidManifest.xml:36:13-44
+103            android:enabled="true"
+103-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\artur\.gradle\caches\9.0.0\transforms\91ff27683e3fc66fc6fdc56cfd7ef053\transformed\profileinstaller-1.3.1\AndroidManifest.xml:37:13-35
+104            android:exported="true"
+104-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\artur\.gradle\caches\9.0.0\transforms\91ff27683e3fc66fc6fdc56cfd7ef053\transformed\profileinstaller-1.3.1\AndroidManifest.xml:38:13-36
+105            android:permission="android.permission.DUMP" >
+105-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\artur\.gradle\caches\9.0.0\transforms\91ff27683e3fc66fc6fdc56cfd7ef053\transformed\profileinstaller-1.3.1\AndroidManifest.xml:39:13-57
+106            <intent-filter>
+106-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\artur\.gradle\caches\9.0.0\transforms\91ff27683e3fc66fc6fdc56cfd7ef053\transformed\profileinstaller-1.3.1\AndroidManifest.xml:40:13-42:29
+107                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+107-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\artur\.gradle\caches\9.0.0\transforms\91ff27683e3fc66fc6fdc56cfd7ef053\transformed\profileinstaller-1.3.1\AndroidManifest.xml:41:17-91
+107-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\artur\.gradle\caches\9.0.0\transforms\91ff27683e3fc66fc6fdc56cfd7ef053\transformed\profileinstaller-1.3.1\AndroidManifest.xml:41:25-88
+108            </intent-filter>
+109            <intent-filter>
+109-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\artur\.gradle\caches\9.0.0\transforms\91ff27683e3fc66fc6fdc56cfd7ef053\transformed\profileinstaller-1.3.1\AndroidManifest.xml:43:13-45:29
+110                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+110-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\artur\.gradle\caches\9.0.0\transforms\91ff27683e3fc66fc6fdc56cfd7ef053\transformed\profileinstaller-1.3.1\AndroidManifest.xml:44:17-85
+110-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\artur\.gradle\caches\9.0.0\transforms\91ff27683e3fc66fc6fdc56cfd7ef053\transformed\profileinstaller-1.3.1\AndroidManifest.xml:44:25-82
+111            </intent-filter>
+112            <intent-filter>
+112-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\artur\.gradle\caches\9.0.0\transforms\91ff27683e3fc66fc6fdc56cfd7ef053\transformed\profileinstaller-1.3.1\AndroidManifest.xml:46:13-48:29
+113                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+113-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\artur\.gradle\caches\9.0.0\transforms\91ff27683e3fc66fc6fdc56cfd7ef053\transformed\profileinstaller-1.3.1\AndroidManifest.xml:47:17-88
+113-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\artur\.gradle\caches\9.0.0\transforms\91ff27683e3fc66fc6fdc56cfd7ef053\transformed\profileinstaller-1.3.1\AndroidManifest.xml:47:25-85
+114            </intent-filter>
+115            <intent-filter>
+115-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\artur\.gradle\caches\9.0.0\transforms\91ff27683e3fc66fc6fdc56cfd7ef053\transformed\profileinstaller-1.3.1\AndroidManifest.xml:49:13-51:29
+116                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+116-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\artur\.gradle\caches\9.0.0\transforms\91ff27683e3fc66fc6fdc56cfd7ef053\transformed\profileinstaller-1.3.1\AndroidManifest.xml:50:17-95
+116-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\artur\.gradle\caches\9.0.0\transforms\91ff27683e3fc66fc6fdc56cfd7ef053\transformed\profileinstaller-1.3.1\AndroidManifest.xml:50:25-92
+117            </intent-filter>
+118        </receiver>
+119    </application>
+120
+121</manifest>
